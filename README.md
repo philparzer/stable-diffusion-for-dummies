@@ -24,7 +24,7 @@ Let's download some stuff.
 
 ## 3. Usage
 
-### 3.2 Start the graphic user interface 
+### 3.1 Start the graphic user interface 
 
 ```command prompt
 python start.py 
