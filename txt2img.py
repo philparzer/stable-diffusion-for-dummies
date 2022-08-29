@@ -14,6 +14,6 @@ def main():
     prompt = sys.argv[1]
 
     os.system(f'python optimizedSD/optimized_txt2img.py --prompt "{prompt}" --n_samples {N_SAMPLES} --n_iter {N_ITER} --W {WIDTH} --H {HEIGHT} --seed {SEED}')
-
+    
 if __name__ == "__main__":
     main()

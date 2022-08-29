@@ -2,12 +2,13 @@ import os
 import utils
 from colorama import init
 
-init()
+def main():
 
-HEIGHT, WIDTH, N_ITER, N_SAMPLES, SEED = utils.read_config()
+    init()
 
-with open("prompt_list.txt",'r') as f:
-    lines = f.read().splitlines() 
+    HEIGHT, WIDTH, N_ITER, N_SAMPLES, SEED = utils.read_config()
 
-for prompt in lines:
-    os.system(f'python optimizedSD/optimized_txt2img.py --prompt "{prompt}" --n_samples {N_SAMPLES} --n_iter {N_ITER} --W {WIDTH} --H {HEIGHT} --seed {SEED}')
+    os.system(f'python optimizedSD/optimized_txt2img.py --from-file prompt_list.txt --n_samples {N_SAMPLES} --n_iter {N_ITER} --W {WIDTH} --H {HEIGHT} --seed {SEED}')
+
+if __name__ == "__main__":
+    main()
