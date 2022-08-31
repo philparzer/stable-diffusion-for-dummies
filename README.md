@@ -71,6 +71,7 @@ In the root folder ```stable-diffusion-for-dummies/``` you should see ```config.
 | number_of_iterations = 1  |  number of times the generation process is going to run  |
 | number_of_images_per_iteration* = 2  | how many images are generated each time the generation process runs |
 | seed | TODO  |
+
 *If your number_of_iterations (batch_size) is too big, you could run into problems. I'd suggest starting out small (at like < 5) and increasing it in small steps to find out how many images your graphics card can handle.
 
 ### 3.2 Using this repo
