@@ -50,6 +50,10 @@ conda env create -f environment.yaml
 conda activate ldm
 ```
 
+- in Visual Studio Code, navigate to the folder ```stable-diffusion-for-dummies/```
+
+TODO GIF
+
 - this could take a while, go grab a cup of coffee ☕
 
 ## 3. Usage
