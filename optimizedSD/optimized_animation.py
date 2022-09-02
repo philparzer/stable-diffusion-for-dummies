@@ -355,37 +355,27 @@ if opt.precision == "autocast" and opt.device != "cpu":
 else:
     precision_scope = nullcontext
 
+
 fixed_prompt = opt.prompt
+
+#loop over frames
 for i in range(opt.frames):
     print(fixed_prompt)
     print(outpath)
     if i != 0:
-        #bild croppen
-
-        #bild initen
+        #crop image
         new_filename = f"{(os.path.join('outputs/img2img-samples/', '_'.join(re.split(':| ', fixed_prompt )))[:150])}/seed_{opt.seed - 1}_{'%05d' % (i,)}.png"
-        # print("before replace")
-        # print(new_filename)
-        # d = new_filename.replace('\\\\', '/')
-        # print(d)
+        zoomedIm = zoom_at(Image.open(f"{(os.path.join('outputs/img2img-samples/', '_'.join(re.split(':| ', fixed_prompt )))[:150])}/seed_{opt.seed - 1}_{'%05d' % (i,)}.png"), 256, 256, 1.1) #TODO: flag for these values / zoom not constant + strength not constant?
+        zoomedIm = zoomedIm.save(f"{(os.path.join('outputs/img2img-samples/', '_'.join(re.split(':| ', fixed_prompt )))[:150])}/seed_{opt.seed - 1}_{'%05d' % (i,)}.png") #TODO: save to different out dir
         
-        zoomedIm = zoom_at(Image.open(f"{(os.path.join('outputs/img2img-samples/', '_'.join(re.split(':| ', fixed_prompt )))[:150])}/seed_{opt.seed - 1}_{'%05d' % (i,)}.png"), 256, 256, 2)
-        zoomedIm = zoomedIm.save('test.png')
-
+        #load image
         init_image = load_img(new_filename, opt.H, opt.W).to(opt.device)
-        print("still not thrown")
-        if opt.device != "cpu" and opt.precision == "autocast":
-            model.half()
-            modelCS.half()
-            modelFS.half()
-            init_image = init_image.half()
-        print("still not thrown 2")
+        init_image = init_image.half()
+        modelFS.to(opt.device)
         init_image = repeat(init_image, "1 ... -> b ...", b=batch_size)
-        print("still not thrown 3")
-        
-        #init_latent = modelFS.get_first_stage_encoding(modelFS.encode_first_stage(init_image))  # move to latent space
-        print("still not thrown 4")
+        init_latent = modelFS.get_first_stage_encoding(modelFS.encode_first_stage(init_image))  # move to latent space
     generateImg()
     
 
 print("done")
+# TODO: create vid / gif
