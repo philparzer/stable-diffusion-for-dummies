@@ -1,13 +1,17 @@
 # Stable Diffusion for Dummies
 
-## 0. Prerequisites
+Who this repo is for:
+TODO details box Dummies
+TODO details box Devs
+
+# 0. Prerequisites
 
 What you'll need:
 
 - [x] Windows 10 or 11
 - [x] decent NVIDIA graphics card (about 4 VRAM and more)
 
-## 1. Downloads
+# 1. Downloads
 
 Let's download some stuff.
 
@@ -40,7 +44,7 @@ TODO GIF
 
 TODO GIF
 
-## 2. Setup
+# 2. Setup
 
 - use Windows Search to search for 'Anaconda' and open 'Anaconda Prompt'
 - in Anaconda Prompt type the following:
@@ -56,7 +60,7 @@ TODO GIF
 
 - this could take a while, go grab a cup of coffee ☕
 
-## 3. Usage
+# 3. Usage
 
 We're all set, let's generate some images. We've implemented several different ways to use Stable Diffusion. But first let's talk about configuration.
 
@@ -74,12 +78,13 @@ In the root folder ```stable-diffusion-for-dummies/``` you should see ```config.
 
 *If your number_of_iterations (batch_size) is too big, you could run into problems. I'd suggest starting out small (at like < 5) and increasing it in small steps to find out how many images your graphics card can handle.
 
-### 3.2 Using this repo
+### 3.2 Usage Basics
 
 There is one important distinction other than user experience when it comes to the ways of using this repo described below:
 
 - txt-2-img (text to image) -> generates an image based on a given prompt
 - img-2-img (image to image) -> generates a new image based on a given image and a prompt
+- animation -> generates a number of frames based on a given image and prompt
 
 Before using any of the methods listed below, make sure to open a command prompt in Visual Studio Code and enter this command:
 
@@ -89,7 +94,7 @@ TODO GIF
 conda activate ldm
 ```
 
-### 3.2 Start the graphic user interface
+### 3.2 Use the graphical user interface
 
 The most straight-forward, albeit not the fastest, way of using this repository for image generation is to enter the command below and pick one of three choices. This opens up a graphical user interface that you might feel more comfortable working with.
 
@@ -97,7 +102,7 @@ The most straight-forward, albeit not the fastest, way of using this repository 
 python start.py 
 ```
 
-### 3.3 Start generating in the console
+### 3.3 Use the console
 
 The following two commands have the same functionality as the previous command, the difference is that they don't use a graphical user interface.
 
@@ -121,6 +126,12 @@ python txt2img_prompt_queue.py
 python img2img_prompt_queue.py 
 ```
 
-## 4. Where to go from here
+TODO animation command
+
+# 4. Where to go from here
+
+TODO
+
+# 5. Planned features
 
 TODO
