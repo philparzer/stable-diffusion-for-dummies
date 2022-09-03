@@ -17,6 +17,7 @@ from ldm.util import instantiate_from_config
 from optimUtils import split_weighted_subprompts, logger
 from transformers import logging
 import pandas as pd
+import shutil
 logging.set_verbosity_error()
 
 def zoom_at(img, x, y, zoom):
@@ -37,7 +38,6 @@ def generateImg():
                     sample_path = os.path.join(outpath, "_".join(re.split(":| ", prompts[0])))[:150]
                     os.makedirs(sample_path, exist_ok=True)
                     base_count = len(os.listdir(sample_path))
-                    print("still not thrown 5")
                     with precision_scope("cuda"):
                         modelCS.to(opt.device)
                         uc = None
@@ -45,7 +45,6 @@ def generateImg():
                             uc = modelCS.get_learned_conditioning(batch_size * [""])
                         if isinstance(prompts, tuple):
                             prompts = list(prompts)
-                        print("still not thrown 6")
 
                         subprompts, weights = split_weighted_subprompts(prompts[0])
                         if len(subprompts) > 1:
@@ -59,7 +58,6 @@ def generateImg():
                                 c = torch.add(c, modelCS.get_learned_conditioning(subprompts[i]), alpha=weight)
                         else:
                             c = modelCS.get_learned_conditioning(prompts)
-                        print("still not thrown 7")
 
                         if opt.device != "cpu":
                             mem = torch.cuda.memory_allocated() / 1e6
@@ -153,7 +151,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument(
     "--prompt", type=str, nargs="?", default="a painting of a virus monster playing guitar", help="the prompt to render"
 )
-parser.add_argument("--outdir", type=str, nargs="?", help="dir to write results to", default="outputs/img2img-samples")
+parser.add_argument("--outdir", type=str, nargs="?", help="dir to write results to", default="outputs/animation-samples") #TODO: remove this?
 parser.add_argument("--init-img", type=str, nargs="?", help="path to the input image")
 
 parser.add_argument(
@@ -272,7 +270,7 @@ if opt.seed == None:
 seed_everything(opt.seed)
 
 # Logging
-logger(vars(opt), log_csv = "logs/img2img_logs.csv")
+logger(vars(opt), log_csv = "logs/img2img_logs.csv")#TODO: change
 
 sd = load_model_from_config(f"{ckpt}")
 li, lo = [], []
@@ -356,26 +354,35 @@ else:
     precision_scope = nullcontext
 
 
+
 fixed_prompt = opt.prompt
+output_dir = f"{(os.path.join('outputs/animation-samples/', '_'.join(re.split(':| ', fixed_prompt )))[:150])}" #TODO: test this implementation of folder creation and file move
+os.makedirs(output_dir, exist_ok=True)
+shutil.move(opt.init_img, output_dir) #TODO: copy?
 
 #loop over frames
 for i in range(opt.frames):
     print(fixed_prompt)
     print(outpath)
+
     if i != 0:
+        
         #crop image
-        new_filename = f"{(os.path.join('outputs/img2img-samples/', '_'.join(re.split(':| ', fixed_prompt )))[:150])}/seed_{opt.seed - 1}_{'%05d' % (i,)}.png"
-        zoomedIm = zoom_at(Image.open(f"{(os.path.join('outputs/img2img-samples/', '_'.join(re.split(':| ', fixed_prompt )))[:150])}/seed_{opt.seed - 1}_{'%05d' % (i,)}.png"), 256, 256, 1.1) #TODO: flag for these values / zoom not constant + strength not constant?
-        zoomedIm = zoomedIm.save(f"{(os.path.join('outputs/img2img-samples/', '_'.join(re.split(':| ', fixed_prompt )))[:150])}/seed_{opt.seed - 1}_{'%05d' % (i,)}.png") #TODO: save to different out dir
+        new_filename = f"{output_dir}/seed_{opt.seed - 1}_{'%05d' % (i,)}.png"
+        zoomedIm = zoom_at(Image.open(f"{output_dir}/seed_{opt.seed - 1}_{'%05d' % (i,)}.png"), 256, 256, 1.1) #TODO: flag for these values / zoom not constant + strength not constant?
+        zoomedIm = zoomedIm.save(f"{output_dir}/seed_{opt.seed - 1}_{'%05d' % (i,)}.png") #TODO: save to different out dir
         
         #load image
         init_image = load_img(new_filename, opt.H, opt.W).to(opt.device)
         init_image = init_image.half()
         modelFS.to(opt.device)
         init_image = repeat(init_image, "1 ... -> b ...", b=batch_size)
-        init_latent = modelFS.get_first_stage_encoding(modelFS.encode_first_stage(init_image))  # move to latent space
+        init_latent = modelFS.get_first_stage_encoding(modelFS.encode_first_stage(init_image))
     generateImg()
     
 
 print("done")
 # TODO: create vid / gif
+# TODO: generate first image, then loop
+# TODO: if no prompt throw
+# TODO: allow file extensions other than .png
