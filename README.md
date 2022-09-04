@@ -129,7 +129,7 @@ Then, enter any of the commands described below into this command prompt.
 
 ## 3.2 Use the graphical user interface (GUI)
 
-The most straight-forward, albeit not the fastest, way of using this repository for image generation is to enter the command below and pick one of two choices. This opens up a graphical user interface that you might feel more comfortable working with starting out.
+The most straight-forward, albeit not the fastest, way of using this repository for image generation is to enter the command below and pick one of two choices. This opens up a graphical user interface that you might feel more comfortable working with.
 
 ```command prompt
 python gui.py 
@@ -146,7 +146,7 @@ Or ```/outputs/img2img-samples/<your-prompt>``` if you chose img2img.
 We recommend using the CLI (Command Line Interface) as soon as you feel more comfortable.
 There are several commands to use that all serve a different purpose.
 
-But first let's talk about configuration. We've implemented a config file where you can set specific values and save them, so that you don't need to input them every time you want to generate an image.
+But first, let's talk about configuration. We've implemented a config file where you can set specific values and save them, so that you don't need to input them every time you want to generate an image.
 
 In the root folder ```stable-diffusion-for-dummies/``` you should see ```config.ini```. This file contains several fields you are free to update.
 
