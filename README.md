@@ -1,3 +1,5 @@
+# Stable Diffusion for Dummies
+
 **Who this repo is for:**
 
 <details open>
