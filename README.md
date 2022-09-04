@@ -101,16 +101,17 @@ code
 
 # 3. Usage 🖼️
 
-We're all set, let's generate some images. We've implemented several different ways to use Stable Diffusion. 
+We're all set, let's generate some images. 
 
 ## 3.1 Usage Basics
 
 There is one important distinction other than user experience when it comes to the ways of using this repo described below:
 
-- txt-2-img (text to image) -> generates an image based on a given prompt
-- img-2-img (image to image) -> generates a new image based on a given image and a prompt
+- txt2img (text to image) -> generates an image based on a given prompt
+- img2img (image to image) -> generates a new image based on a given image and a prompt
 - animation -> generates a number of frames based on a given image and prompt
 
+We've implemented several different ways to use Stable Diffusion.
 Before using any of the methods listed below, make sure to open Visual Studio Code with Anaconda:
 
 Then, open a command prompt in Visual Studio Code and enter this command:
@@ -162,6 +163,7 @@ In the root folder ```stable-diffusion-for-dummies/``` you should see ```config.
 ## 3.3 Use the Console
 
 Enter one of the commands below and the CLI will guide you through the whole process, just make sure to read the console output.
+>💡 if you ever want to stop a running process in the console, click on the console and hit CTRL+C
 
 ### 3.3.1 Simple txt2img + img2img
 
