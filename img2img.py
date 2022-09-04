@@ -25,7 +25,7 @@ def main():
     print(f'{Fore.GREEN}Set PROMPT to "{prompt}"')
 
     print(f'\n{Fore.BLUE}Specify how much the created images should resemble the original image:')
-    strength = pyip.inputFloat('Enter a value between 0.0 (indistinguishable) and 0.9 (minor similarity):', min=0.0, max=0.9)
+    strength = pyip.inputFloat(f'Enter a value between 0.0 (indistinguishable) and 0.9 (minor similarity):{Fore.WHITE}\n', min=0.0, max=0.9)
     print(f'{Fore.GREEN}Set STRENGTH to "{strength}"')
 
     print(f'\n{Fore.YELLOW}STARTING...\n{Fore.WHITE}')
