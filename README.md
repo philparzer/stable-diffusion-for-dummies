@@ -167,7 +167,7 @@ In the root folder ```stable-diffusion-for-dummies/``` you should see ```config.
 | use_seed | set this to 'True' if you want to use a preconfigured seed or 'False' if you don't  |
 | seed | unique identifier of your image (share seed and prompt to enable other people to generate the same image as you)  |
 
-> *If your number_of_iterations (batch_size) is too big, you could run into problems. I'd suggest starting out small (at like < 5) and increasing it in small steps to find out how many images your graphics card can handle.
+>💡 *If your number_of_iterations (batch_size) is too big, you could run into problems. I'd suggest starting out small (at like < 5) and increasing it in small steps to find out how many images your graphics card can handle.
 
 ## 3.3 Use the Console
 
