@@ -19,10 +19,12 @@ from transformers import logging
 import pandas as pd
 import shutil
 logging.set_verbosity_error()
-
+   
 def zoom_at(img, x, y, zoom):
     w, h = img.size
     zoom2 = zoom * 2
+    print(x - w / zoom2)
+    print()
     img = img.crop((x - w / zoom2, y - h / zoom2, 
                     x + w / zoom2, y + h / zoom2))
     return img.resize((w, h), Image.LANCZOS)
@@ -125,7 +127,7 @@ def load_model_from_config(ckpt, verbose=False):
 
 
 def load_img(path, h0, w0):
-
+    global zoom_width, zoom_height
     image = Image.open(path).convert("RGB")
     w, h = image.size
 
@@ -256,8 +258,16 @@ parser.add_argument(
     "--frames",
     type=int,
     help="number of frames to generate",
-    default=10
+    default=40
 )
+
+parser.add_argument(
+    "--zoom-factor",
+    type=float,
+    help="how much each new frame should zoom into last one",
+    default=1.1
+)
+
 opt = parser.parse_args()
 
 tic = time.time()
@@ -270,7 +280,10 @@ if opt.seed == None:
 seed_everything(opt.seed)
 
 # Logging
-logger(vars(opt), log_csv = "logs/img2img_logs.csv")#TODO: change
+logger(vars(opt), log_csv = "logs/animation_logs.csv")
+
+
+
 
 sd = load_model_from_config(f"{ckpt}")
 li, lo = [], []
@@ -358,7 +371,13 @@ else:
 fixed_prompt = opt.prompt
 output_dir = f"{(os.path.join('outputs/animation-samples/', '_'.join(re.split(':| ', fixed_prompt )))[:150])}" #TODO: test this implementation of folder creation and file move
 os.makedirs(output_dir, exist_ok=True)
-shutil.move(opt.init_img, output_dir) #TODO: copy?
+shutil.copy(opt.init_img, output_dir) #TODO: copy?
+
+
+
+
+#print ("zooming to -> " + str(zoom_width), str(zoom_height))
+
 
 #loop over frames
 for i in range(opt.frames):
@@ -366,10 +385,10 @@ for i in range(opt.frames):
     print(outpath)
 
     if i != 0:
-        
+        #print("zooming to -> in loop" + str(zoom_width), str(zoom_height))
         #crop image
         new_filename = f"{output_dir}/seed_{opt.seed - 1}_{'%05d' % (i,)}.png"
-        zoomedIm = zoom_at(Image.open(f"{output_dir}/seed_{opt.seed - 1}_{'%05d' % (i,)}.png"), 256, 256, 1.1) #TODO: flag for these values / zoom not constant + strength not constant?
+        zoomedIm = zoom_at(Image.open(f"{output_dir}/seed_{opt.seed - 1}_{'%05d' % (i,)}.png"), 256, 256, opt.zoom_factor) #TODO: flag for these values / zoom not constant + strength not constant?
         zoomedIm = zoomedIm.save(f"{output_dir}/seed_{opt.seed - 1}_{'%05d' % (i,)}.png") #TODO: save to different out dir
         
         #load image
