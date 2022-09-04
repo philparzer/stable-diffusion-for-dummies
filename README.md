@@ -33,8 +33,9 @@ What you'll need:
 
 - [x] Windows 10 or 11
 - [x] decent NVIDIA graphics card (about 4 VRAM and more)
+- [x] ca. 15 gb of disk space (preferably on an SSD)
 
-On an Apple Silicon Mac?
+> On an Apple Silicon (M1, M2) Mac?
 Check out <a href="https://twitter.com/levelsio/status/1565731907664478209" rel="noopener noreferrer">this guide</a>
 
 ## 1. Downloads ⬇️
@@ -43,7 +44,7 @@ Let's download some stuff.
 
 ### 1.1 Visual Studio
 
-<a href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false" rel="noopener noreferrer">Download and install Visual Studio without any workloads
+<a href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false" rel="noopener noreferrer">Download and install Visual Studio with "Desktop Development with C++" workload
 </a>
 
 <img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/install-vs.gif"></img>
