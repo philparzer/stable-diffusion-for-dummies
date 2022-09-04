@@ -149,6 +149,8 @@ In the root folder ```stable-diffusion-for-dummies/``` you should see ```config.
 
 <img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/configure.gif"></img>
 
+>💡 notice the white circle right next to the file name ```config.ini```? the circle indicates that your changes are not saved, save the file by hitting CTRL+S
+
 | config.ini fields | description |
 | ------------- | ------------- |
 | image_height = 512  | height of the generated image, in pixels  |
