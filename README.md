@@ -140,7 +140,7 @@ Or ```/outputs/img2img-samples/<your-prompt>``` if you chose img2img.
 
 ## 3.3 Configure the Console
 
-We recommended using the CLI (Command Line Interface) as soon as you feel more comfortable.
+We recommend using the CLI (Command Line Interface) as soon as you feel more comfortable.
 There are several commands to use that all serve a different purpose.
 
 But first let's talk about configuration. We've implemented a config file where you can set specific values and save them, so that you don't need to input them every time you want to generate an image.
