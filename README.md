@@ -9,7 +9,7 @@ Who this repo is for:
 </details>
 
 <details closed>
-<summary>Stakeholders / People familiar with the topic</summary>
+<summary>Stakeholders</summary>
 This repo is primarily focused on simplifying the setup process and UX. In addition to that, there are some unique features sprinkled in 🧂</br></br>
 List of features and changes compared to <a href="https://github.com/basujindal/stable-diffusion" rel="noopener noreferrer">Basujindal's Optimized Stable Diffusion</a>:
 
