@@ -53,7 +53,7 @@ Let's download some stuff.
 ### 1.4 This Repo
 
 - Download **this repo** as .zip
-- unzip it in an appropriate location (preferably on a SSD)
+- unzip it in an appropriate location (preferably on an SSD)
 
 TODO GIF
 
