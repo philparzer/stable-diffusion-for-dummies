@@ -33,7 +33,7 @@ What you'll need:
 
 - [x] Windows 10 or 11
 - [x] decent NVIDIA graphics card (about 4 VRAM and more)
-- [x] ca. 15 gb of disk space (preferably on an SSD)
+- [x] ~15gb of disk space (preferably on an SSD)
 
 > On an Apple Silicon (M1, M2) Mac?
 Check out <a href="https://twitter.com/levelsio/status/1565731907664478209" rel="noopener noreferrer">this guide</a>
