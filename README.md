@@ -41,27 +41,34 @@ Check out <a href="https://twitter.com/levelsio/status/1565731907664478209" rel=
 
 Let's download some stuff.
 
-### 1.1 CUDA
+### 1.1 Visual Studio
+
+<a href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false" rel="noopener noreferrer">Download and install Visual Studio without any workloads
+</a>
+
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/install-vs.gif"></img>
+
+### 1.2 CUDA
 
 <a href="https://developer.nvidia.com/cuda-11-6-2-download-archive?target_os=Windows&target_arch=x86_64" rel="noopener noreferrer">Download and install CUDA drivers
 </a>
 
-### 1.2 Anaconda
+### 1.3 Anaconda
 
 <a href="https://www.anaconda.com/" rel="noopener noreferrer">Download and install Anaconda</a>
 
-### 1.3 Visual Studio Code
+### 1.4 Visual Studio Code
 
 <a href="https://code.visualstudio.com/Download" rel="noopener noreferrer">Download and install Visual Studio Code</a>
 
-### 1.4 This Repo
+### 1.5 This Repository
 
 - Download **this repo** as .zip
 - unzip it in an appropriate location (preferably on an SSD)
 
 <img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/download-repo.gif"></img>
 
-### 1.5 Stable Diffusion Weights
+### 1.6 Stable Diffusion Weights
 
 - <a href="https://huggingface.co/CompVis/stable-diffusion-v-1-4-original" rel="noopener noreferrer">Download the model weights from Huggingface</a> (you'll need to create an account)
 - unzip the file
