@@ -1,15 +1,15 @@
 # Stable Diffusion for Dummies
 
-Who this repo is for:
+**Who this repo is for:**
 
 <details open>
-<summary><b>Newbies</b></summary>
-<p>We created this repo to simplify the setup and installation process as well as user experience for newcomers. We try to break down barriers of entry and make it possible for creative people of all backgrounds to be able to use state-of-the-art image generation models.</p>
+<summary><b>Newbies 👶</b></summary>
+<p>We maintain this repo to simplify the setup and installation process as well as user experience for newcomers. We try to break down barriers of entry and make it possible for creative people of all backgrounds to be able to use state-of-the-art image generation models.</p>
 
 </details>
 
 <details closed>
-<summary><b>Stakeholders</b></summary>
+<summary><b>Stakeholders 👩‍💻</b></summary>
 This repo is primarily focused on simplifying the setup process and UX. In addition to that, there are some unique features sprinkled in 🧂</br></br>
 List of features and changes compared to <a href="https://github.com/basujindal/stable-diffusion" rel="noopener noreferrer">Basujindal's Optimized Stable Diffusion</a>:
 
@@ -27,41 +27,49 @@ List of features and changes compared to <a href="https://github.com/basujindal/
 
 ---
 
-## 0. Prerequisites 🎒
+# 0. Prerequisites 🎒
 
 What you'll need:
 
 - [x] Windows 10 or 11
 - [x] decent NVIDIA graphics card (about 4 VRAM and more)
+- [x] ~15gb of disk space (preferably on an SSD)
 
-On an Apple Silicon Mac?
+> On an Apple Silicon (M1, M2) Mac?
 Check out <a href="https://twitter.com/levelsio/status/1565731907664478209" rel="noopener noreferrer">this guide</a>
 
-## 1. Downloads ⬇️
+# 1. Downloads ⬇️
 
 Let's download some stuff.
 
-### 1.1 CUDA
+### 1.1 Visual Studio
+
+<a href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false" rel="noopener noreferrer">Download and install Visual Studio with "Desktop Development with C++" workload
+</a>
+
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/install-vs.gif"></img>
+
+### 1.2 CUDA
 
 <a href="https://developer.nvidia.com/cuda-11-6-2-download-archive?target_os=Windows&target_arch=x86_64" rel="noopener noreferrer">Download and install CUDA drivers
 </a>
 
-### 1.2 Anaconda
+### 1.3 Anaconda
 
 <a href="https://www.anaconda.com/" rel="noopener noreferrer">Download and install Anaconda</a>
 
-### 1.3 Visual Studio Code
+### 1.4 Visual Studio Code
 
 <a href="https://code.visualstudio.com/Download" rel="noopener noreferrer">Download and install Visual Studio Code</a>
 
-### 1.4 This Repo
+### 1.5 This Repository
 
 - Download **this repo** as .zip
 - unzip it in an appropriate location (preferably on an SSD)
 
 <img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/download-repo.gif"></img>
 
-### 1.5 Stable Diffusion Weights
+### 1.6 Stable Diffusion Weights
 
 - <a href="https://huggingface.co/CompVis/stable-diffusion-v-1-4-original" rel="noopener noreferrer">Download the model weights from Huggingface</a> (you'll need to create an account)
 - unzip the file
@@ -70,7 +78,7 @@ Let's download some stuff.
 
 TODO GIF
 
-## 2. Setup 🛠️
+# 2. Setup 🛠️
 
 - use Windows Search to search for 'Anaconda' and open 'Anaconda Prompt'
 - in Anaconda Prompt enter the followin two commands (hit enter after each line):
@@ -91,11 +99,11 @@ code
 
 - this could take a while, go grab a cup of coffee ☕
 
-## 3. Usage 🖼️
+# 3. Usage 🖼️
 
 We're all set, let's generate some images. We've implemented several different ways to use Stable Diffusion. 
 
-### 3.1 Usage Basics
+## 3.1 Usage Basics
 
 There is one important distinction other than user experience when it comes to the ways of using this repo described below:
 
@@ -115,7 +123,7 @@ conda activate ldm
 
 Then, enter any of the commands described below into this command prompt.
 
-### 3.2 Use the graphical user interface (GUI)
+## 3.2 Use the graphical user interface (GUI)
 
 The most straight-forward, albeit not the fastest, way of using this repository for image generation is to enter the command below and pick one of two choices. This opens up a graphical user interface that you might feel more comfortable working with starting out.
 
@@ -129,7 +137,7 @@ python gui.py
 Find all generated images in the folder ```/outputs/txt2img-samples/<your-prompt>```.
 Or ```/outputs/img2img-samples/<your-prompt>``` if you chose img2img.
 
-### 3.3 Configure the Console
+## 3.3 Configure the Console
 
 We recommended using the CLI (Command Line Interface) as soon as you feel more comfortable.
 There are several commands to use that all serve a different purpose.
@@ -151,11 +159,11 @@ In the root folder ```stable-diffusion-for-dummies/``` you should see ```config.
 
 > *If your number_of_iterations (batch_size) is too big, you could run into problems. I'd suggest starting out small (at like < 5) and increasing it in small steps to find out how many images your graphics card can handle.
 
-### 3.3 Use the Console
+## 3.3 Use the Console
 
 Enter one of the commands below and the CLI will guide you through the whole process, just make sure to read the console output.
 
-#### 3.3.1 Simple txt2img + img2img
+### 3.3.1 Simple txt2img + img2img
 
 The first two commands are fairly straightforward and handle txt2img and img2img generation.
 
@@ -172,7 +180,7 @@ Or ```/outputs/img2img-samples/<your-prompt>``` if you chose img2img.
 
 ---
 
-#### 3.3.2 Queue a list of prompts and generate
+### 3.3.2 Queue a list of prompts and generate
 
 The next two commands allow the program to go through a list of prompts that were set by you in ```prompt_list.txt``` beforehand.
 
@@ -191,7 +199,7 @@ Or ```/outputs/img2img-samples/<your-prompt>``` if you chose img2img.
 
 ---
 
-#### 3.3.2 Generate an animation
+### 3.3.2 Generate an animation
 
 <p id ="animation.py">The last command is a special addition that allows you to generate an animation based on a given image and prompt.</p>
 
@@ -208,14 +216,14 @@ We recommend using <a href="https://ezgif.com/maker" rel="noopener noreferrer">E
 <img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/example-animation.gif"></img>
 > cat litter box full of snails, cat sitting in litter box, painting in style of Salvador Dali
 
-## 4. Where to go from here 🛣️
+# 4. Where to go from here 🛣️
 
 - Suggest some features <a href="https://twitter.com/philipp_parzer" rel="noopener noreferrer">on Twitter (my DMs are open)</a> 💡
 - Contribute to Stable Diffusion for Dummies 🤗
 - Get some inspiration over at <a href="https://lexica.art/" rel="noopener noreferrer">Lexica.art</a>
 - Download and use a <a href="https://huggingface.co/CompVis/stable-diffusion-v-1-4-original" rel="noopener noreferrer">  different checkpoint of the model </a>
 
-## 5. Planned features 🚧
+# 5. Planned features 🚧
 
 - ```animation.py```
     - convert frames to animated format
@@ -227,6 +235,6 @@ We recommend using <a href="https://ezgif.com/maker" rel="noopener noreferrer">E
     - implement inpainting
 - ...
 
-## 6. Issues ❗
+# 6. Issues ❗
 
 - animation.py -> red/violet hue after frame 60 -> needs more testing
