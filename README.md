@@ -4,10 +4,9 @@ Who this repo is for:
 
 <details open>
 <summary>Newbies</summary>
-We created this repo to simplify the setup and installation process as well as user experience for newcomers. We try to break down barriers of entry and make it possible for creative people of all backgrounds to be able to use state-of-the-art image generation models.
-</details>
+<p>We created this repo to simplify the setup and installation process as well as user experience for newcomers. We try to break down barriers of entry and make it possible for creative people of all backgrounds to be able to use state-of-the-art image generation models.</p>
 
-</br>
+</details>
 
 <details closed>
 <summary>Stakeholders / People familiar with the topic</summary>
@@ -19,6 +18,10 @@ List of features and changes compared to <a href="https://github.com/basujindal/
 - readme for non-technical people
 
 </details>
+</br>
+<p>If anything below doesn't work, hit me up <a href="https://twitter.com/philipp_parzer" rel="noopener noreferrer">on Twitter (my DMs are open)</a> 🤗</p>
+
+<p>If everything does work, consider <a href="https://ko-fi.com/philparzer" rel="noopener noreferrer">buying me a coffee</a> ☕</p>
 
 ## 0. Prerequisites 🎒
 
