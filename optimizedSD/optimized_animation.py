@@ -369,9 +369,9 @@ else:
 
 
 fixed_prompt = opt.prompt
-output_dir = f"{(os.path.join('outputs/animation-samples/', '_'.join(re.split(':| ', fixed_prompt )))[:150])}" #TODO: test this implementation of folder creation and file move
+output_dir = f"{(os.path.join('outputs/animation-samples/', '_'.join(re.split(':| ', fixed_prompt )))[:150])}"
 os.makedirs(output_dir, exist_ok=True)
-shutil.copy(opt.init_img, output_dir) #TODO: copy?
+shutil.copy(opt.init_img, output_dir)
 
 
 
