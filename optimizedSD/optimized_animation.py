@@ -153,7 +153,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument(
     "--prompt", type=str, nargs="?", default="a painting of a virus monster playing guitar", help="the prompt to render"
 )
-parser.add_argument("--outdir", type=str, nargs="?", help="dir to write results to", default="outputs/animation-samples") #TODO: remove this?
+parser.add_argument("--outdir", type=str, nargs="?", help="dir to write results to", default="outputs/animation-samples")
 parser.add_argument("--init-img", type=str, nargs="?", help="path to the input image")
 
 parser.add_argument(
@@ -373,23 +373,16 @@ output_dir = f"{(os.path.join('outputs/animation-samples/', '_'.join(re.split(':
 os.makedirs(output_dir, exist_ok=True)
 shutil.copy(opt.init_img, output_dir)
 
-
-
-
-#print ("zooming to -> " + str(zoom_width), str(zoom_height))
-
-
 #loop over frames
 for i in range(opt.frames):
     print(fixed_prompt)
     print(outpath)
 
     if i != 0:
-        #print("zooming to -> in loop" + str(zoom_width), str(zoom_height))
         #crop image
         new_filename = f"{output_dir}/seed_{opt.seed - 1}_{'%05d' % (i,)}.png"
-        zoomedIm = zoom_at(Image.open(f"{output_dir}/seed_{opt.seed - 1}_{'%05d' % (i,)}.png"), 256, 256, opt.zoom_factor) #TODO: flag for these values / zoom not constant + strength not constant?
-        zoomedIm = zoomedIm.save(f"{output_dir}/seed_{opt.seed - 1}_{'%05d' % (i,)}.png") #TODO: save to different out dir
+        zoomedIm = zoom_at(Image.open(f"{output_dir}/seed_{opt.seed - 1}_{'%05d' % (i,)}.png"), 256, 256, opt.zoom_factor)
+        zoomedIm = zoomedIm.save(f"{output_dir}/seed_{opt.seed - 1}_{'%05d' % (i,)}.png")
         
         #load image
         init_image = load_img(new_filename, opt.H, opt.W).to(opt.device)
@@ -402,6 +395,3 @@ for i in range(opt.frames):
 
 print("done")
 # TODO: create vid / gif
-# TODO: generate first image, then loop
-# TODO: if no prompt throw
-# TODO: allow file extensions other than .png

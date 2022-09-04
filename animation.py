@@ -8,6 +8,7 @@ def main():
     init()
 
     os.system('CLS')
+    print(f'{Fore.YELLOW}Read up on the documentation at https://github.com/philparzer/stable-diffusion-for-dummies#readme if you have any troubles\n{Fore.WHITE}')
 
     init_image_path = pyip.inputStr(f"\n{Fore.BLUE}Enter the PATH to your image:{Fore.WHITE}\nRight click on image, click 'Copy Path' and paste\n")
     try:
