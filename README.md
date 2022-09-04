@@ -3,13 +3,13 @@
 Who this repo is for:
 
 <details open>
-<summary><b>Newbies</b></summary>
+<summary><b>Newbies 👶</b></summary>
 <p>We created this repo to simplify the setup and installation process as well as user experience for newcomers. We try to break down barriers of entry and make it possible for creative people of all backgrounds to be able to use state-of-the-art image generation models.</p>
 
 </details>
 
 <details closed>
-<summary><b>Stakeholders</b></summary>
+<summary><b>Stakeholders 👩‍💻</b></summary>
 This repo is primarily focused on simplifying the setup process and UX. In addition to that, there are some unique features sprinkled in 🧂</br></br>
 List of features and changes compared to <a href="https://github.com/basujindal/stable-diffusion" rel="noopener noreferrer">Basujindal's Optimized Stable Diffusion</a>:
 
