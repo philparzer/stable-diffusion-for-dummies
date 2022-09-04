@@ -11,7 +11,7 @@
 <details closed>
 <summary><b>Stakeholders 👩‍💻</b></summary>
 This repo is primarily focused on simplifying the setup process and UX. In addition to that, there are some unique features sprinkled in 🧂</br></br>
-List of features and changes compared to <a href="https://github.com/basujindal/stable-diffusion" rel="noopener noreferrer">Basujindal's Optimized Stable Diffusion</a>:
+List of features and changes compared to <a target="_blank" href="https://github.com/basujindal/stable-diffusion" rel="noopener noreferrer">Basujindal's Optimized Stable Diffusion</a>:
 
 - easier to use CLI
 - <a href="#animation.py">animation.py</a>
@@ -21,9 +21,9 @@ List of features and changes compared to <a href="https://github.com/basujindal/
 
 ---
 
-<p>If anything below doesn't work, hit me up <a href="https://twitter.com/philipp_parzer" rel="noopener noreferrer">on Twitter (my DMs are open)</a> 🤗</p>
+<p>If anything below doesn't work, hit me up <a target="_blank" href="https://twitter.com/philipp_parzer" rel="noopener noreferrer">on Twitter (my DMs are open)</a> 🤗</p>
 
-<p>If everything does work, consider <a href="https://ko-fi.com/philparzer" rel="noopener noreferrer">buying me a coffee</a> ☕</p>
+<p>If everything does work, consider <a target="_blank" href="https://ko-fi.com/philparzer" rel="noopener noreferrer">buying me a coffee</a> ☕</p>
 
 ---
 
@@ -36,7 +36,7 @@ What you'll need:
 - [x] ~15gb of disk space (preferably on an SSD)
 
 > On an Apple Silicon (M1, M2) Mac?
-Check out <a href="https://twitter.com/levelsio/status/1565731907664478209" rel="noopener noreferrer">this guide</a>
+Check out <a target="_blank" href="https://twitter.com/levelsio/status/1565731907664478209" rel="noopener noreferrer">this guide</a>
 
 # 1. Downloads ⬇️
 
@@ -44,23 +44,23 @@ Let's download some stuff.
 
 ### 1.1 Visual Studio
 
-<a href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false" rel="noopener noreferrer">Download and install Visual Studio with "Desktop Development with C++" workload
+<a target="_blank" href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false" rel="noopener noreferrer">Download and install Visual Studio with "Desktop Development with C++" workload
 </a>
 
 <img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/install-vs.gif"></img>
 
 ### 1.2 CUDA
 
-<a href="https://developer.nvidia.com/cuda-11-6-2-download-archive?target_os=Windows&target_arch=x86_64" rel="noopener noreferrer">Download and install CUDA drivers
+<a target="_blank" href="https://developer.nvidia.com/cuda-11-6-2-download-archive?target_os=Windows&target_arch=x86_64" rel="noopener noreferrer">Download and install CUDA drivers
 </a>
 
 ### 1.3 Anaconda
 
-<a href="https://www.anaconda.com/" rel="noopener noreferrer">Download and install Anaconda</a>
+<a target="_blank" href="https://www.anaconda.com/" rel="noopener noreferrer">Download and install Anaconda</a>
 
 ### 1.4 Visual Studio Code
 
-<a href="https://code.visualstudio.com/Download" rel="noopener noreferrer">Download and install Visual Studio Code</a>
+<a target="_blank" href="https://code.visualstudio.com/Download" rel="noopener noreferrer">Download and install Visual Studio Code</a>
 
 ### 1.5 This Repository
 
@@ -71,7 +71,7 @@ Let's download some stuff.
 
 ### 1.6 Stable Diffusion Weights
 
-- <a href="https://huggingface.co/CompVis/stable-diffusion-v-1-4-original" rel="noopener noreferrer">Download the model weights from Huggingface</a> (you'll need to create an account first)
+- <a target="_blank" href="https://huggingface.co/CompVis/stable-diffusion-v-1-4-original" rel="noopener noreferrer">Download the model weights from Huggingface</a> (you'll need to create an account first)
 
 <img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/download-weights.gif"></img>
 
@@ -218,17 +218,17 @@ python animation.py
 
 Find all generated frames in the folder ```/outputs/animation-samples/<your-prompt>```.
 
-We recommend using <a href="https://ezgif.com/maker" rel="noopener noreferrer">EZGIF</a> to generate the animation. Just upload all frames, hit generate and edit the animation to your liking.
+We recommend using <a target="_blank" href="https://ezgif.com/maker" rel="noopener noreferrer">EZGIF</a> to generate the animation. Just upload all frames, hit generate and edit the animation to your liking.
 
 <img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/example-animation.gif"></img>
 > cat litter box full of snails, cat sitting in litter box, painting in style of Salvador Dali
 
 # 4. Where to go from here 🛣️
 
-- Suggest some features <a href="https://twitter.com/philipp_parzer" rel="noopener noreferrer">on Twitter (my DMs are open)</a> 💡
+- Suggest some features <a target="_blank" href="https://twitter.com/philipp_parzer" rel="noopener noreferrer">on Twitter (my DMs are open)</a> 💡
 - Contribute to Stable Diffusion for Dummies 🤗
-- Get some inspiration over at <a href="https://lexica.art/" rel="noopener noreferrer">Lexica.art</a>
-- Download and use a <a href="https://huggingface.co/CompVis/stable-diffusion-v-1-4-original" rel="noopener noreferrer">  different checkpoint of the model </a>
+- Get some inspiration over at <a target="_blank" href="https://lexica.art/" rel="noopener noreferrer">Lexica.art</a>
+- Download and use a <a target="_blank" href="https://huggingface.co/CompVis/stable-diffusion-v-1-4-original" rel="noopener noreferrer">  different checkpoint of the model </a>
 
 # 5. Planned features 🚧
 
