@@ -55,7 +55,7 @@ Let's download some stuff.
 </a>
 
 ---
-### Restart your PC after CUDA has been installed
+### ⚠ Restart your PC after CUDA has been installed
 ---
 
 ### 1.3 Anaconda
