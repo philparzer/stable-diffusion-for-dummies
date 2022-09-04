@@ -54,6 +54,10 @@ Let's download some stuff.
 <a target="_blank" href="https://developer.nvidia.com/cuda-11-6-2-download-archive?target_os=Windows&target_arch=x86_64" rel="noopener noreferrer">Download and install CUDA drivers
 </a>
 
+---
+### Restart your PC after CUDA has been installed
+---
+
 ### 1.3 Anaconda
 
 <a target="_blank" href="https://www.anaconda.com/" rel="noopener noreferrer">Download and install Anaconda</a>
