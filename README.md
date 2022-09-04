@@ -55,7 +55,7 @@ Let's download some stuff.
 - Download **this repo** as .zip
 - unzip it in an appropriate location (preferably on an SSD)
 
-TODO GIF
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/download-repo.gif"></img>
 
 ### 1.5 Stable Diffusion Weights
 
@@ -69,16 +69,21 @@ TODO GIF
 ## 2. Setup 🛠️
 
 - use Windows Search to search for 'Anaconda' and open 'Anaconda Prompt'
-- in Anaconda Prompt type the following:
+- in Anaconda Prompt enter the followin two commands (hit enter after each line):
 
 ``` command prompt
 conda env create -f environment.yaml
-conda activate ldm
+code
 ```
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/open-anaconda.gif"></img>
 
-- in Visual Studio Code, navigate to the folder ```stable-diffusion-for-dummies/```
+- in the newly opened Visual Studio Code Window navigate to the folder ```stable-diffusion-for-dummies/```
 
-TODO GIF
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/open-folder.gif"></img>
+
+- in Visual Studio Code, open a command prompt and enter the following command ```conda activate ldm```
+
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/activate-env.gif"></img>
 
 - this could take a while, go grab a cup of coffee ☕
 
@@ -110,15 +115,15 @@ There is one important distinction other than user experience when it comes to t
 
 Before using any of the methods listed below, make sure to open Visual Studio Code with Anaconda:
 
-TODO GIF
-
 Then, open a command prompt in Visual Studio Code and enter this command:
 
 ``` command prompt
 conda activate ldm
 ```
 
-TODO GIF
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/before-use.gif"></img>
+
+Then, enter any of the commands described below into this command prompt.
 
 ### 3.2 Use the graphical user interface (GUI)
 
@@ -128,7 +133,8 @@ The most straight-forward, albeit not the fastest, way of using this repository 
 python gui.py 
 ```
 
-TODO GIF
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/start-gui.gif"></img>
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/use-gui.gif"></img>
 
 Find all generated images in the folder ```/outputs/txt2img-samples/<your-prompt>```.
 Or ```/outputs/img2img-samples/<your-prompt>``` if you chose img2img.
@@ -155,7 +161,7 @@ Or ```/outputs/img2img-samples/<your-prompt>``` if you chose img2img.
 
 The next two commands allow the program to go through a list of prompts that were set by you in ```prompt_list.txt``` beforehand.
 
-TODO GIF
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/edit-prompt-list.gif"></img>
 
 ```command prompt
 python txt2img_prompt_queue.py 
@@ -176,12 +182,14 @@ Or ```/outputs/img2img-samples/<your-prompt>``` if you chose img2img.
 python animation.py 
 ```
 
-TODO GIF
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/start-animation.gif"></img>
 
 Find all generated frames in the folder ```/outputs/animation-samples/<your-prompt>```.
+
 We recommend using <a href="https://ezgif.com/maker" rel="noopener noreferrer">EZGIF</a> to generate the animation. Just upload all frames, hit generate and edit the animation to your liking.
 
-TODO GIF
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/example-animation.gif"></img>
+> cat litter box full of snails, cat sitting in litter box, painting in style of Salvador Dali
 
 ## 4. Where to go from here 🛣️
 
@@ -201,3 +209,7 @@ TODO GIF
     - implement animation support
     - implement inpainting
 - ...
+
+## 6. Issues ❗
+
+- animation.py -> red/violet hue after frame 60 -> needs more testing
