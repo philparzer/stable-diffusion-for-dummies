@@ -194,11 +194,11 @@ The next two commands allow the program to go through a list of prompts that wer
 <img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/edit-prompt-list.gif"></img>
 
 ```command prompt
-python txt2img_prompt_queue.py 
+python txt_queue.py 
 ```
 
 ```command prompt
-python img2img_prompt_queue.py 
+python img_queue.py 
 ```
 
 Find all generated images in the folder ```/outputs/txt2img-samples/<your-prompt>```.
