@@ -3,13 +3,13 @@
 Who this repo is for:
 
 <details open>
-<summary>Newbies</summary>
+<summary><b>Newbies</b></summary>
 <p>We created this repo to simplify the setup and installation process as well as user experience for newcomers. We try to break down barriers of entry and make it possible for creative people of all backgrounds to be able to use state-of-the-art image generation models.</p>
 
 </details>
 
 <details closed>
-<summary>Stakeholders</summary>
+<summary><b>Stakeholders</b></summary>
 This repo is primarily focused on simplifying the setup process and UX. In addition to that, there are some unique features sprinkled in 🧂</br></br>
 List of features and changes compared to <a href="https://github.com/basujindal/stable-diffusion" rel="noopener noreferrer">Basujindal's Optimized Stable Diffusion</a>:
 
@@ -18,10 +18,14 @@ List of features and changes compared to <a href="https://github.com/basujindal/
 - readme for non-technical people
 
 </details>
-</br>
+
+---
+
 <p>If anything below doesn't work, hit me up <a href="https://twitter.com/philipp_parzer" rel="noopener noreferrer">on Twitter (my DMs are open)</a> 🤗</p>
 
 <p>If everything does work, consider <a href="https://ko-fi.com/philparzer" rel="noopener noreferrer">buying me a coffee</a> ☕</p>
+
+---
 
 ## 0. Prerequisites 🎒
 
@@ -53,9 +57,9 @@ Let's download some stuff.
 ### 1.4 This Repo
 
 - Download **this repo** as .zip
-- unzip it in an appropriate location (preferably on a SSD)
+- unzip it in an appropriate location (preferably on an SSD)
 
-TODO GIF
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/download-repo.gif"></img>
 
 ### 1.5 Stable Diffusion Weights
 
@@ -69,38 +73,29 @@ TODO GIF
 ## 2. Setup 🛠️
 
 - use Windows Search to search for 'Anaconda' and open 'Anaconda Prompt'
-- in Anaconda Prompt type the following:
+- in Anaconda Prompt enter the followin two commands (hit enter after each line):
 
 ``` command prompt
 conda env create -f environment.yaml
-conda activate ldm
+code
 ```
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/open-anaconda.gif"></img>
 
-- in Visual Studio Code, navigate to the folder ```stable-diffusion-for-dummies/```
+- in the newly opened Visual Studio Code Window navigate to the folder ```stable-diffusion-for-dummies/```
 
-TODO GIF
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/open-folder.gif"></img>
+
+- in Visual Studio Code, open a command prompt and enter the following command ```conda activate ldm```
+
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/activate-env.gif"></img>
 
 - this could take a while, go grab a cup of coffee ☕
 
 ## 3. Usage 🖼️
 
-We're all set, let's generate some images. We've implemented several different ways to use Stable Diffusion. But first let's talk about configuration.
+We're all set, let's generate some images. We've implemented several different ways to use Stable Diffusion. 
 
-### 3.1 Configuration
-
-In the root folder ```stable-diffusion-for-dummies/``` you should see ```config.ini```. This file contains several fields you are free to update.
-
-| config.ini fields | description |
-| ------------- | ------------- |
-| image_height = 512  | height of the generated image, in pixels  |
-| image_width = 512  | width of the generated image, in pixels  |
-| number_of_iterations = 1  |  number of times the generation process is going to run  |
-| number_of_images_per_iteration* = 2  | how many images are generated each time the generation process runs |
-| seed | TODO  |
-
-> *If your number_of_iterations (batch_size) is too big, you could run into problems. I'd suggest starting out small (at like < 5) and increasing it in small steps to find out how many images your graphics card can handle.
-
-### 3.2 Usage Basics
+### 3.1 Usage Basics
 
 There is one important distinction other than user experience when it comes to the ways of using this repo described below:
 
@@ -110,15 +105,15 @@ There is one important distinction other than user experience when it comes to t
 
 Before using any of the methods listed below, make sure to open Visual Studio Code with Anaconda:
 
-TODO GIF
-
 Then, open a command prompt in Visual Studio Code and enter this command:
 
 ``` command prompt
 conda activate ldm
 ```
 
-TODO GIF
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/before-use.gif"></img>
+
+Then, enter any of the commands described below into this command prompt.
 
 ### 3.2 Use the graphical user interface (GUI)
 
@@ -128,15 +123,39 @@ The most straight-forward, albeit not the fastest, way of using this repository 
 python gui.py 
 ```
 
-TODO GIF
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/start-gui.gif"></img>
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/use-gui.gif"></img>
 
 Find all generated images in the folder ```/outputs/txt2img-samples/<your-prompt>```.
 Or ```/outputs/img2img-samples/<your-prompt>``` if you chose img2img.
 
-### 3.3 Use the console
+### 3.3 Configure the Console
 
 We recommended using the CLI (Command Line Interface) as soon as you feel more comfortable.
-There are several commands to use that all serve a different purpose. Enter one of the commands below and the CLI will guide you through the whole process, just make sure to read the console output.
+There are several commands to use that all serve a different purpose.
+
+But first let's talk about configuration. We've implemented a config file where you can set specific values and save them, so that you don't need to input them every time you want to generate an image.
+
+In the root folder ```stable-diffusion-for-dummies/``` you should see ```config.ini```. This file contains several fields you are free to update.
+
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/configure.gif"></img>
+
+| config.ini fields | description |
+| ------------- | ------------- |
+| image_height = 512  | height of the generated image, in pixels  |
+| image_width = 512  | width of the generated image, in pixels  |
+| number_of_iterations = 1  |  number of times the generation process is going to run  |
+| number_of_images_per_iteration* = 2  | how many images are generated each time the generation process runs |
+| use_seed | set this to 'True' if you want to use a preconfigured seed or 'False' if you don't  |
+| seed | unique identifier of your image (share seed and prompt to enable other people to generate the same image as you)  |
+
+> *If your number_of_iterations (batch_size) is too big, you could run into problems. I'd suggest starting out small (at like < 5) and increasing it in small steps to find out how many images your graphics card can handle.
+
+### 3.3 Use the Console
+
+Enter one of the commands below and the CLI will guide you through the whole process, just make sure to read the console output.
+
+#### 3.3.1 Simple txt2img + img2img
 
 The first two commands are fairly straightforward and handle txt2img and img2img generation.
 
@@ -153,9 +172,11 @@ Or ```/outputs/img2img-samples/<your-prompt>``` if you chose img2img.
 
 ---
 
+#### 3.3.2 Queue a list of prompts and generate
+
 The next two commands allow the program to go through a list of prompts that were set by you in ```prompt_list.txt``` beforehand.
 
-TODO GIF
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/edit-prompt-list.gif"></img>
 
 ```command prompt
 python txt2img_prompt_queue.py 
@@ -170,18 +191,22 @@ Or ```/outputs/img2img-samples/<your-prompt>``` if you chose img2img.
 
 ---
 
+#### 3.3.2 Generate an animation
+
 <p id ="animation.py">The last command is a special addition that allows you to generate an animation based on a given image and prompt.</p>
 
 ```command prompt
 python animation.py 
 ```
 
-TODO GIF
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/start-animation.gif"></img>
 
 Find all generated frames in the folder ```/outputs/animation-samples/<your-prompt>```.
+
 We recommend using <a href="https://ezgif.com/maker" rel="noopener noreferrer">EZGIF</a> to generate the animation. Just upload all frames, hit generate and edit the animation to your liking.
 
-TODO GIF
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/example-animation.gif"></img>
+> cat litter box full of snails, cat sitting in litter box, painting in style of Salvador Dali
 
 ## 4. Where to go from here 🛣️
 
@@ -201,3 +226,7 @@ TODO GIF
     - implement animation support
     - implement inpainting
 - ...
+
+## 6. Issues ❗
+
+- animation.py -> red/violet hue after frame 60 -> needs more testing
