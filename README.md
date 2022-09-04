@@ -81,7 +81,7 @@ TODO GIF
 # 2. Setup 🛠️
 
 - use Windows Search to search for 'Anaconda' and open 'Anaconda Prompt'
-- in Anaconda Prompt enter the followin two commands (hit enter after each line):
+- in Anaconda Prompt enter the following two commands (hit enter after each line):
 
 ``` command prompt
 conda env create -f environment.yaml
