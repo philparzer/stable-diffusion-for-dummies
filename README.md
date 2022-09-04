@@ -71,7 +71,10 @@ Let's download some stuff.
 
 ### 1.6 Stable Diffusion Weights
 
-- <a href="https://huggingface.co/CompVis/stable-diffusion-v-1-4-original" rel="noopener noreferrer">Download the model weights from Huggingface</a> (you'll need to create an account)
+- <a href="https://huggingface.co/CompVis/stable-diffusion-v-1-4-original" rel="noopener noreferrer">Download the model weights from Huggingface</a> (you'll need to create an account first)
+
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/download-weights.gif"></img>
+
 - unzip the file
 - move it into the folder you've downloaded before ```stable-diffusion-for-dummies/models/ldm/stable-diffusion-v1```
 - rename the file to *model.ckpt*
