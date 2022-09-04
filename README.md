@@ -1,4 +1,4 @@
-# Stable Diffusion for Dummies
+<img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/banner.png" style="height=120px"></img>
 
 Who this repo is for:
 
