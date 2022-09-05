@@ -83,8 +83,6 @@ Let's download some stuff.
 - move it into the folder you've downloaded before ```stable-diffusion-for-dummies/models/ldm/stable-diffusion-v1```
 - rename the file to *model.ckpt*
 
-TODO GIF
-
 # 2. Setup 🛠️
 
 - use Windows Search to search for 'Anaconda' and open 'Anaconda Prompt'
@@ -106,6 +104,12 @@ code
 
 - this could take a while, go grab a cup of coffee ☕
 
+- enter the following command in your command prompt
+
+``` command prompt
+pip install gradio
+```
+
 # 3. Usage 🖼️
 
 We're all set, let's generate some images. 
@@ -119,9 +123,8 @@ There is one important distinction other than user experience when it comes to t
 - animation -> generates a number of frames based on a given image and prompt
 
 We've implemented several different ways to use Stable Diffusion.
-Before using any of the methods listed below, make sure to open Visual Studio Code with Anaconda:
-
-Then, open a command prompt in Visual Studio Code and enter this command:
+Before using any of the methods listed below, make sure to open Visual Studio Code with Anaconda. 
+In Visual Studio Code open a command prompt and enter this command:
 
 ``` command prompt
 conda activate ldm
