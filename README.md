@@ -110,6 +110,8 @@ code
 pip install gradio
 ```
 
+- woah you've made it all the way through, good job 👏 
+
 # 3. Usage 🖼️
 
 We're all set, let's generate some images. 
