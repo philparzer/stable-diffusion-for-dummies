@@ -202,6 +202,8 @@ The next two commands allow the program to go through a list of prompts that wer
 
 <img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/edit-prompt-list.gif"></img>
 
+Don't forget to hit CTRL + S to save ```prompt_list.txt``` after you're finished editing.
+
 ```command prompt
 python txt_queue.py 
 ```
