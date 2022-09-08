@@ -9,6 +9,7 @@ from ldm.modules.diffusionmodules.util import checkpoint
 
 
 def exists(val):
+    
     return val is not None
 
 
