@@ -85,10 +85,9 @@ Let's download some stuff.
 # 2. Setup 🛠️
 
 - use Windows Search to search for 'Anaconda' and open 'Anaconda Prompt'
-- in Anaconda Prompt enter the following two commands (hit enter after each line):
+- in Anaconda Prompt enter the following 
 
 ``` command prompt
-conda env create -f environment.yaml
 code
 ```
 <img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/open-anaconda.gif"></img>
@@ -97,13 +96,15 @@ code
 
 <img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/open-folder.gif"></img>
 
-- in Visual Studio Code, open a command prompt and enter the following command ```conda activate ldm```
+- in Visual Studio Code, open a command prompt and enter the following command, this could take a while, go grab a cup of coffee ☕:
+```command prompt
+conda env create -f environment.yaml
+```
 
 <img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/activate-env.gif"></img>
 
-- this could take a while, go grab a cup of coffee ☕
 
-- enter the following command in your command prompt
+- enter the following command in your command prompt:
 
 ``` command prompt
 pip install gradio
