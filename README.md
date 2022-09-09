@@ -79,8 +79,7 @@ Let's download some stuff.
 
 <img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/download-weights.gif"></img>
 
-- unzip the file
-- move it into the folder you've downloaded before ```stable-diffusion-for-dummies/models/ldm/stable-diffusion-v1```
+- move it into the folder you've downloaded before ```stable-diffusion-for-dummies-main/models/ldm/stable-diffusion-v1```
 - rename the file to *model.ckpt*
 
 # 2. Setup 🛠️
@@ -94,7 +93,7 @@ code
 ```
 <img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/open-anaconda.gif"></img>
 
-- in the newly opened Visual Studio Code Window navigate to the folder ```stable-diffusion-for-dummies/```
+- in the newly opened Visual Studio Code Window navigate to the folder ```stable-diffusion-for-dummies-main/```
 
 <img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/open-folder.gif"></img>
 
