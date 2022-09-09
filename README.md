@@ -100,6 +100,7 @@ code
 ```command prompt
 conda env create -f environment.yaml
 ```
+> ⚠️ don't close anaconda while this processes is running
 
 <img src="https://raw.githubusercontent.com/philparzer/stable-diffusion-for-dummies-assets/master/gifs/activate-env.gif"></img>
 
