@@ -4,7 +4,7 @@
 
 <details open>
 <summary><b>Newbies 👶</b></summary>
-<p>We maintain this repo to simplify the setup and installation process as well as user experience for newcomers. We try to break down barriers of entry and make it possible for creative people of all backgrounds to be able to use state-of-the-art image generation models.</p>
+<p>We maintain this repo to simplify the setup and installation process as well as user experience for newcomers. We try to break down barriers to entry and make it possible for creative people of all backgrounds to be able to use state-of-the-art image generation models.</p>
 
 </details>
 
